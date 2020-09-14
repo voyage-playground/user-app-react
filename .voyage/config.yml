@@ -1,0 +1,15 @@
+services:
+  app:
+    build: ./
+    primary: true
+    exposePort: 3000
+    environment:
+      - name: MOCK_DEPLOYMENT
+        value: 1
+  api:
+    build: ./
+    externalUrl: http://192.168.99.108:30570/jadenorg/express-api
+    externalBranch: master
+    environment:
+      - name: POSTGRES_USER
+        value: 'test'
