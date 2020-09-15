@@ -1,8 +1,13 @@
 import React from 'react';
+import axios from 'axios';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
+  React.useEffect(() => {
+    axios.get(`${process.env.REACT_API_URL}/users`);
+  }, []);
+
   return (
     <div className="App">
       <header className="App-header">
