@@ -8,7 +8,7 @@ services:
         value: 1
   api:
     build: ./
-    externalUrl: http://192.168.99.108:30570/jadenorg/express-api
+    externalUrl: http://192.168.99.108:31459/voyagetest/express-api
     externalBranch: master
     environment:
       - name: POSTGRES_USER
