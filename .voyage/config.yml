@@ -10,6 +10,7 @@ services:
     build: ./
     externalUrl: http://192.168.99.108:31459/voyagetest/express-api
     externalBranch: master
+    exposePort: 3001
     environment:
       - name: PORT
         value: '3001'
