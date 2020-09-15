@@ -11,5 +11,5 @@ services:
     externalUrl: http://192.168.99.108:31459/voyagetest/express-api
     externalBranch: master
     environment:
-      - name: POSTGRES_USER
-        value: 'test'
+      - name: PORT
+        value: '3001'
