@@ -54,7 +54,7 @@ const App = ({ variant }) => {
     const {
       data: { data, pagination },
     } = await axios.get(
-      `${process.env.REACT_API_URL}/users?limit=10&page=${pageNumber}&sortBy=${sortBy}&direction=${direction}`
+      `https://${process.env.REACT_APP_API_URL}/users?limit=10&page=${pageNumber}&sortBy=${sortBy}&direction=${direction}`
     );
     setUsers(data);
     setPagination({
