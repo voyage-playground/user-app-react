@@ -10,6 +10,7 @@ services:
     build: ./
     externalUrl: https://github.com/voyage-playground/user-app-api
     exposePort: 3001
+    externalBranchDefault: foobar
     environment:
       - name: PORT
         value: '3001'
