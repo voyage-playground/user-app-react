@@ -1,16 +1,18 @@
 services:
   app:
-    build: ./
+    context: ./
     primary: true
     exposePort: 3000
     environment:
       - name: MOCK_DEPLOYMENT
         value: 1
   api:
-    build: ./
+    context: ./
     externalUrl: https://github.com/voyage-playground/user-app-api
     externalBranch: master
     exposePort: 3001
     environment:
       - name: PORT
         value: '3001'
+      - name: VOYAGE_SERVICE_API_URL
+        value: ${VOYAGE_SERVICE_API_URL}
