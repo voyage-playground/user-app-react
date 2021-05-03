@@ -6,6 +6,8 @@ services:
     environment:
       - name: MOCK_DEPLOYMENT
         value: 1
+      - name: VOYAGE_SERVICE_API_URL
+        value: ${VOYAGE_SERVICE_API_URL}
   api:
     context: ./
     externalUrl: https://github.com/voyage-playground/user-app-api
@@ -14,5 +16,3 @@ services:
     environment:
       - name: PORT
         value: '3001'
-      - name: VOYAGE_SERVICE_API_URL
-        value: ${VOYAGE_SERVICE_API_URL}
